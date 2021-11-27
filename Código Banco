@@ -1,0 +1,129 @@
+Criar classe principal- 
+//
+principal do pacote;
+importação java.util.Scanner;
+
+principal classe pública {
+
+ valor de flutuação estática privada;
+ vazio estático público principal (String[] args){
+ Conta minhaConta = nova Conta();
+ Leitura do scanner = novo Scanner(System.in);
+ Nome de corda;
+    int num, op;
+ flutuar saldo, valor, lim;
+ fazer{
+            System.out.println("----- * Menu * > Conta Bancaria-----");
+            System.out.println("1- Inserir dados:");
+            System.out.println("2- Mostrar dados");
+ System.out.println("3- Valor depositar");
+            System.out.println("4- Sacar valor");
+            System.out.println("5- Mostrar saldo");
+            System.out.println("0 - Sair ---------------------------");
+            leitura.nextLine();
+            op = leitura.nextInt();
+            switch(op){
+                
+ caso 1 : 
+                    System.out.println("Entre com o nome:"); 
+                    nome = leitura.nextLine();
+                    
+                    System.out.println("Entre com o Numero: "); 
+                    num = leitura.nextInt();
+
+                    System.out.println("Entre com o saldo: "); 
+ saldo leitura.nextFloat();
+                    
+                    System.out.println("Entre com o limite");
+                    lim = leitura.nextFloat();
+                    
+                    minhaConta.inseredados(nome, num, saldo, lim);
+                    
+ quebrar;
+ caso 2 :
+                    minhaConta.mostrardado();
+ quebrar;
+ caso 3 : 
+                    System.out.println("Entre com o valor a ser depositado: ");
+                    valor = leitura.nextFloat();
+                    minhaConta.deposita(valor);
+ quebrar;
+ caso 4:
+                    minhaConta.mostrarsal();
+                    System.out.println("Entre com o valor a ser sacado: ");
+                    valor = leitura.nextFloat();
+                    minhaConta.saca(valor);
+ quebrar;
+ caso 5:
+                    minhaConta.mostrarsal();
+ quebrar;
+            }
+            }while(op != 0);
+        }
+    }
+ Conta da classe Criar
+
+classe pública Conta {
+ int numero privado;
+ int op público;
+ dono de string privado; 
+ saldo duplo privado;
+ limitado duplo privado;
+    
+ Conta pública() {
+ este. Numero=0;
+ este. Dono=" ";
+ este. Saldo=0;
+ este. Limite=0; 
+    }
+ público int getNumero() {
+ retorno Numero; 
+    }
+ vazio público setNumero (int Numero) {
+ este. Numero = Numero; 
+    }
+ público String getDono() {
+ retorno Dono; 
+    }
+ conjunto de vazio públicoDono (String Dono) {
+ este. Dono = Dono; 
+    }
+ público duplo getSaldo() {
+ retorno Saldo;
+    }
+ vazio público definidoSaldo (saldo duplo) {
+ este. Saldo = Saldo;
+    }
+ público duplo getLimite() {
+ Limite de retorno;
+    }
+ vazio público definidoLimite (limite duplo) {
+ este. Limite = Limite;
+    }
+ boolean saca (dupla quantidade) {
+ se (isso. Saldo<quantidade)
+ voltar falso;
+ outra coisa {
+ este. Saldo = isso. Saldo - quantidade;
+ retorno verdadeiro; 
+        }
+    }
+ vazio deposita (dupla quantidade) {
+ este. Saldo = isso. Saldo + quantidade;
+    }
+ inseredados vazios (String a, int b, float c, float l){
+ este. Dono = a;
+ este. Numero = b;
+ este. Saldo = c;
+ este. Limite = l;
+    }
+ vazio mostrardado(){
+        System.out.println("Dono da Conta: " + this.getDono());
+        System.out.println("Numero da Conta: " + this.getNumero());
+        System.out.println("Saldo atual: " + this.getSaldo());
+    }
+ vazio mostrarsal(){
+            System.out.println("Saldo Atual: " + this.getSaldo()); 
+        
+    }
+}
